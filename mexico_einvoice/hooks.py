@@ -210,3 +210,15 @@ doc_events = {
 # auth_hooks = [
 #	"mexico_einvoice.auth.validate"
 # ]
+
+# Apps Page / Desktop Screen (v16)
+# --------------------------------
+# Show app icon on desktop screen in v16 with custom icon
+add_to_apps_screen = [
+	{
+		"name": "mexico_einvoice",
+		"logo": "/assets/mexico_einvoice/images/mexico_logo.jpg",
+		"title": "Mexico Einvoice",
+		"route": "/desk/mexico-einvoice"
+	}
+]

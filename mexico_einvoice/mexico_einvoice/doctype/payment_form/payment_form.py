@@ -9,5 +9,6 @@ class PaymentForm(Document):
 		if self.default:
 			query = f""" update `tabPayment Form` set `default` = 0 where name != "{self.name}" """
 			frappe.db.sql(query)
-			frappe.db.commit()
+			# Note: frappe.db.commit() removed for v16 compatibility
+			# Document hooks cannot commit transactions in v16
 			self.reload()

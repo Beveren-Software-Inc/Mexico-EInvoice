@@ -1,0 +1,119 @@
+{
+ "app": "mexico_einvoice",
+ "charts": [],
+ "content": "[{\"id\":\"9JbLF6BQeL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Home</span>\",\"col\":12}},{\"id\":\"kv9E02UBSE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tax System\",\"col\":3}},{\"id\":\"Iw0PFqAyYf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Form\",\"col\":3}},{\"id\":\"D_co482bJ6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tax Type\",\"col\":3}}]",
+ "creation": "2026-01-25 15:10:02.040778",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "home",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Home",
+ "links": [
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax System",
+   "link_count": 0,
+   "link_to": "Tax System",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Type",
+   "link_count": 0,
+   "link_to": "Tax Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Form",
+   "link_count": 0,
+   "link_to": "Payment Form",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "E Invoice Setting",
+   "link_count": 0,
+   "link_to": "E Invoice Setting",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-01-25 15:28:23.903684",
+ "modified_by": "Administrator",
+ "module": "Mexico Einvoice",
+ "name": "Mexico Einvoice",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tax System",
+   "link_to": "Tax System",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Form",
+   "link_to": "Payment Form",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tax Type",
+   "link_to": "Tax Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Mexico Einvoice",
+ "type": "Workspace"
+}

@@ -6,6 +6,7 @@ app_publisher = "Beveren-Software-Inc"
 app_description = "Mexico Einvoice"
 app_email = "info@beverensoftware.ca"
 app_license = "MIT"
+app_home = "/desk/home"
 
 # Includes in <head>
 # ------------------
@@ -219,6 +220,6 @@ add_to_apps_screen = [
 		"name": "mexico_einvoice",
 		"logo": "/assets/mexico_einvoice/images/mexico_logo.jpg",
 		"title": "Mexico Einvoice",
-		"route": "/app/mexico-einvoice"
+		"route": app_home
 	}
 ]

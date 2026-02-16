@@ -5,3 +5,6 @@
 tags
 mexico_einvoice/docs/current
 node_modules/
+
+# Local Semgrep rules clone (CI clones fresh)
+frappe-semgrep-rules/

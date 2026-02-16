@@ -1,5 +1,3 @@
-from . import __version__ as app_version
-
 app_name = "mexico_einvoice"
 app_title = "Mexico Einvoice"
 app_publisher = "Beveren-Software-Inc"
@@ -36,8 +34,8 @@ fixtures = [
 
 # include js in doctype views
 doctype_js = {
-    "Sales Invoice" : "public/js/sales_invoice.js",
-    "Payment Entry": "public/js/payment_entry.js"
+    "Sales Invoice": "public/js/sales_invoice.js",
+    "Payment Entry": "public/js/payment_entry.js",
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -52,7 +50,7 @@ doctype_js = {
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# "Role": "home_page"
 # }
 
 # Generators
@@ -66,8 +64,8 @@ doctype_js = {
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "mexico_einvoice.utils.jinja_methods",
-#	"filters": "mexico_einvoice.utils.jinja_filters"
+# "methods": "mexico_einvoice.utils.jinja_methods",
+# "filters": "mexico_einvoice.utils.jinja_filters"
 # }
 
 # Installation
@@ -93,11 +91,11 @@ doctype_js = {
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# "Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# "Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -105,7 +103,7 @@ doctype_js = {
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# "ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -113,33 +111,29 @@ doctype_js = {
 # Hook on document methods and events
 
 doc_events = {
-	"Sales Invoice": {
-		"before_submit": "mexico_einvoice.utils.generate_einvoice"
-	},
-    "Payment Entry": {
-        "before_submit": "mexico_einvoice.utils.update_payment"
-	}
+    "Sales Invoice": {"before_submit": "mexico_einvoice.utils.generate_einvoice"},
+    "Payment Entry": {"before_submit": "mexico_einvoice.utils.update_payment"},
 }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"mexico_einvoice.tasks.all"
-#	],
-#	"daily": [
-#		"mexico_einvoice.tasks.daily"
-#	],
-#	"hourly": [
-#		"mexico_einvoice.tasks.hourly"
-#	],
-#	"weekly": [
-#		"mexico_einvoice.tasks.weekly"
-#	],
-#	"monthly": [
-#		"mexico_einvoice.tasks.monthly"
-#	],
+# "all": [
+# "mexico_einvoice.tasks.all"
+# ],
+# "daily": [
+# "mexico_einvoice.tasks.daily"
+# ],
+# "hourly": [
+# "mexico_einvoice.tasks.hourly"
+# ],
+# "weekly": [
+# "mexico_einvoice.tasks.weekly"
+# ],
+# "monthly": [
+# "mexico_einvoice.tasks.monthly"
+# ],
 # }
 
 # Testing
@@ -151,14 +145,14 @@ doc_events = {
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "mexico_einvoice.event.get_events"
+# "frappe.desk.doctype.event.event.get_events": "mexico_einvoice.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "mexico_einvoice.task.get_dashboard_data"
+# "Task": "mexico_einvoice.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -184,41 +178,41 @@ doc_events = {
 # --------------------
 
 # user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
+# {
+# "doctype": "{doctype_1}",
+# "filter_by": "{filter_by}",
+# "redact_fields": ["{field_1}", "{field_2}"],
+# "partial": 1,
+# },
+# {
+# "doctype": "{doctype_2}",
+# "filter_by": "{filter_by}",
+# "partial": 1,
+# },
+# {
+# "doctype": "{doctype_3}",
+# "strict": False,
+# },
+# {
+# "doctype": "{doctype_4}"
+# }
 # ]
 
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
-#	"mexico_einvoice.auth.validate"
+# "mexico_einvoice.auth.validate"
 # ]
 
 # Apps Page / Desktop Screen (v16)
 # --------------------------------
 # Show app icon on desktop screen in v16 with custom icon
 add_to_apps_screen = [
-	{
-		"name": "mexico_einvoice",
-		"logo": "/assets/mexico_einvoice/images/mexico_logo.jpg",
-		"title": "Mexico Einvoice",
-		"route": "/desk/mexico-einvoice"
-	}
+    {
+        "name": "mexico_einvoice",
+        "logo": "/assets/mexico_einvoice/images/mexico_logo.jpg",
+        "title": "Mexico Einvoice",
+        "route": "/desk/mexico-einvoice",
+    }
 ]

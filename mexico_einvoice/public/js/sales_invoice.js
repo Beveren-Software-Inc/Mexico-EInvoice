@@ -3,7 +3,7 @@ var dialog_cancel;
 frappe.ui.form.on('Sales Invoice', {
 	refresh: function(frm) {
         dialog_cancel = new frappe.ui.Dialog(getDialogCancel(frm));
-        
+
 		if (frm.doc.docstatus == 1 && frm.doc.e_invoice_id) {
             frm.add_custom_button(__('Download E-Invoice'), function() {
                 download_e_invoice(frm.doc.e_invoice_id)
@@ -22,21 +22,21 @@ frappe.ui.form.on('Sales Invoice', {
     },
     before_cancel: function(frm){
         dialog_cancel.show();
-        frappe.validated = false; 
+        frappe.validated = false;
     },
     onload_post_render: function(frm) {
         if(frm.is_dirty()){
             frm.set_value({
                 'e_invoice_id': '',
                 'invoice_status': '',
-                'motive': '', 
+                'motive': '',
                 'uuid': '',
                 'cfdi_version': '',
                 'verification_url': '',
                 'sat_cert_number': '',
                 'signature': ''
             })
-            
+
             //clear e invoice payments
             frm.set_value('e_invoice_payments', []);
 
@@ -114,7 +114,7 @@ function cancel_einvoice(frm, values) {
                 });
             }, 500);
             frm.reload_doc();
-        } 
+        }
         else {
             frappe.msgprint({
                 message: 'Error: ' + "E-Invoice cancellation fail",

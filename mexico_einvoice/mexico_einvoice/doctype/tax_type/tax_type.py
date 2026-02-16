@@ -4,5 +4,6 @@
 # import frappe
 from frappe.model.document import Document
 
+
 class TaxType(Document):
-	pass
+    pass

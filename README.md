@@ -26,5 +26,35 @@ To configure Mexico E Invoicing, follow these steps:
 2. Navigate to the "E Invoice Setting" section in ERPNext.
 3. Configure the FacturAPI Secret Key in the settings to establish the connection between Mexico E Invoicing and FacturAPI.
 
+## Running Semgrep (Linters) locally
+
+The app uses [Frappe Semgrep rules](https://github.com/frappe/semgrep-rules) for linting, as required by [Frappe Cloud Marketplace guidelines](https://docs.frappe.io/cloud/marketplace/app-authoring-guidelines#linters-and-server-tests-ci).
+
+**One-time setup:**
+
+```bash
+# From your machine (any directory)
+pip install semgrep
+git clone --depth 1 https://github.com/frappe/semgrep-rules.git frappe-semgrep-rules
+```
+
+**Run Semgrep from the app root** (e.g. `apps/mexico_einvoice` or your repo root):
+
+```bash
+# If you cloned frappe-semgrep-rules inside the app:
+cd /path/to/mexico_einvoice
+semgrep --config ./frappe-semgrep-rules/rules --config r/python.lang.correctness .
+```
+
+If the rules repo is elsewhere (e.g. `~/frappe-semgrep-rules`):
+
+```bash
+cd /path/to/mexico_einvoice
+semgrep --config ~/frappe-semgrep-rules/rules --config r/python.lang.correctness .
+```
+
+- Use `--severity=ERROR` to only report errors (ignore warnings).
+- Fix or exclude any reported issues so that CI (and marketplace review) passes.
+
 ## License and Contributing
 Mexico E Invoicing is released under the MIT License. We welcome contributions from the community to further improve and enhance Mexico E Invoicing.

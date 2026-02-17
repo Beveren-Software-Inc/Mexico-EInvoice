@@ -68,10 +68,19 @@ def get_customer_details(doc):
         "Customer", doc.customer, ["customer_name", "tax_id", "tax_system"]
     )
 
-    query = (
-        f""" select email_id, pincode from `tabAddress` where name = "{doc.customer_address}" """
+    # query = (
+    #     f""" select email_id, pincode from `tabAddress` where name = "{doc.customer_address}" """
+    # )
+    # address = frappe.db.sql(query, as_dict=1)
+    address = frappe.db.sql(
+        """
+            SELECT email_id, pincode
+            FROM `tabAddress`
+            WHERE name = %s
+        """,
+        (doc.customer_address,),
+        as_dict=1,
     )
-    address = frappe.db.sql(query, as_dict=1)
 
     customer = {
         "legal_name": customer_name,
@@ -113,8 +122,13 @@ def get_items(doc):
     return items
 
 
+# def cancel_einvoice(invoice_name, e_invoice_id, motive):
 @frappe.whitelist()
-def cancel_einvoice(invoice_name, e_invoice_id, motive):
+def cancel_einvoice(
+    invoice_name: str,
+    e_invoice_id: str,
+    motive: str,
+):
     e_invoice_setting = frappe.get_doc("E Invoice Setting", "E Invoice Setting")
     if e_invoice_setting.cancel_e_invoice:
         token = get_token()
@@ -141,7 +155,7 @@ def cancel_einvoice(invoice_name, e_invoice_id, motive):
                 invoice_name,
                 {"invoice_status": response.get("status"), "motive": reason},
             )
-            frappe.db.commit()
+            # frappe.db.commit()
             return "success"
         else:
             response = response.json()

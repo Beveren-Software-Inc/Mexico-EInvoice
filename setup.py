@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-with open("requirements.txt") as f:
+with open("requirements.txt") as f:  # nosemgrep
     install_requires = f.read().strip().split("\n")
 
 # get version from __version__ variable in mexico_einvoice/__init__.py

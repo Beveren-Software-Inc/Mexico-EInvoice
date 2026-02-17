@@ -183,7 +183,7 @@
    "print": 1,
    "read": 0,
    "report": 1,
-   "role": "All",
+   "role": "Accounts User",
    "select": 1,
    "set_user_permissions": 0,
    "share": 1,

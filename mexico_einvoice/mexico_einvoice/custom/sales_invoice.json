@@ -1111,7 +1111,7 @@
    "print": 0,
    "read": 1,
    "report": 0,
-   "role": "All",
+   "role": "Accounts Manager",
    "select": 0,
    "set_user_permissions": 0,
    "share": 0,

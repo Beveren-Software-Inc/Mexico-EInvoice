@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="mexico_einvoice",
-    version="0.1.0",  # hardcoded, no import needed
+    version="0.1.0",
     description="Mexico Einvoice",
     author="Beveren-Software-Inc",
     author_email="info@beverensoftware.ca",

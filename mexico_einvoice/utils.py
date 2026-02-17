@@ -46,7 +46,6 @@ def generate_einvoice(doc, method):
             doc.cfdi_version = (response.get("cfdi_version"),)
             doc.verification_url = response.get("verification_url")
 
-            # validate partial payment
             validate_partial_payment(doc, response)
         else:
             response = response.json()
@@ -68,10 +67,7 @@ def get_customer_details(doc):
         "Customer", doc.customer, ["customer_name", "tax_id", "tax_system"]
     )
 
-    # query = (
-    #     f""" select email_id, pincode from `tabAddress` where name = "{doc.customer_address}" """
-    # )
-    # address = frappe.db.sql(query, as_dict=1)
+   
     address = frappe.db.sql(
         """
             SELECT email_id, pincode

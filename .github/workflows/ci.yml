@@ -137,4 +137,7 @@ jobs:
         run: pip install semgrep
 
       - name: Run Semgrep rules
-        run: semgrep ci --config ./frappe-semgrep-rules/rules --config r/python.lang.correctness .
+        run: |
+          semgrep ci \
+            --config ./frappe-semgrep-rules/rules \
+            --config r/python.lang.correctness

@@ -67,7 +67,6 @@ def get_customer_details(doc):
         "Customer", doc.customer, ["customer_name", "tax_id", "tax_system"]
     )
 
-   
     address = frappe.db.sql(
         """
             SELECT email_id, pincode

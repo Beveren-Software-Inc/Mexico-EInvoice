@@ -1,5 +1,6 @@
 import frappe
 
+
 @frappe.whitelist()
 def filter_payment_form(
     doctype: str,

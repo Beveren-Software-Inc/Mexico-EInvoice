@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
 
+# nosemgrep: frappe-semgrep-rules.rules.security.frappe-security-file-traversal
 with open("requirements.txt") as f:
     install_requires = f.read().strip().split("\n")
 
